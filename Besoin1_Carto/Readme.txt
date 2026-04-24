@@ -4,48 +4,60 @@
 ========================================================================
 
 Cet outil permet de classer instantanément un arbre dans une catégorie 
-de taille (Petit, Moyen ou Grand) en utilisant l'intelligence artificielle.
-
-Les modèles ont été préalablement entraînés sur l'ensemble du patrimoine 
-arboré de la ville. Aucune installation technique ou entraînement 
-supplémentaire n'est requis de votre part.
+de taille (Petit, Moyen ou Grand) grâce à un moteur d'Intelligence 
+Artificielle pré-entraîné.
 
 ------------------------------------------------------------------------
-1. CONTENU DU DOSSIER
+1. DESCRIPTION TECHNIQUE
 ------------------------------------------------------------------------
-- predict_cluster.py   : Le programme à lancer.
-- model_kX.pkl         : Cerveau de l'IA (pré-chargé).
-- scaler_unique.pkl    : Outil de normalisation (pré-chargé).
-- mapping_kX.pkl       : Traducteur des catégories (pré-chargé).
+L'outil s'appuie sur l'algorithme K-Means (Apprentissage Non Supervisé).
+Il utilise deux variables morphologiques pour la prédiction :
+- La hauteur totale de l'arbre (mètres).
+- Le diamètre du tronc (centimètres).
+
+Le système est livré avec des modèles optimisés pour garantir une 
+réponse immédiate sans nécessiter de phase d'entraînement supplémentaire.
 
 ------------------------------------------------------------------------
-2. COMMENT LANCER L'OUTIL ?
+2. CONTENU DU DOSSIER
 ------------------------------------------------------------------------
-Ouvrez votre terminal (invite de commande) dans ce dossier et tapez :
+- predict_cluster.py   : Programme principal à exécuter.
+- export_IA.csv        : Base de données du patrimoine arboré.
+- model_kX.pkl         : Fichiers "cerveaux" de l'IA (K=2, 3 et 4).
+- scaler_unique.pkl    : Outil de mise à l'échelle des mesures.
+- mapping_kX.pkl       : Dictionnaire de traduction (ID -> Texte).
+- carte_interactive_besoin1.html : Support visuel de la ville.
+
+------------------------------------------------------------------------
+3. MODE D'EMPLOI
+------------------------------------------------------------------------
+Pour lancer l'application, ouvrez un terminal dans ce dossier et tapez :
 
     > python predict_cluster.py
 
-------------------------------------------------------------------------
-3. FONCTIONNEMENT DU SCRIPT
-------------------------------------------------------------------------
-Une fois le script lancé, suivez simplement les instructions à l'écran :
+Le programme vous guidera ensuite étape par étape :
 
-1. CHOIX DE LA PRÉCISION : Tapez '2', '3' ou '4' pour choisir le nombre 
-   de catégories de taille souhaitées.
-   (Recommandation : Tapez '3' pour obtenir Petit / Moyen / Grand).
+1. CHOIX DU MODÈLE : Saisissez le nombre de catégories (2, 3 ou 4).
+   * Note : La configuration '3' est recommandée pour les services 
+     techniques (Petit / Moyen / Grand).
 
-2. CARACTÉRISTIQUES : Saisissez la hauteur (en mètres) et le diamètre 
-   du tronc (en centimètres).
+2. SAISIE DES DONNÉES : Entrez la hauteur (m) et le diamètre (cm).
 
-3. RÉSULTAT : L'IA affiche immédiatement la catégorie correspondante.
+3. RÉSULTAT : L'IA affiche la catégorie de l'arbre et ouvre 
+   automatiquement la carte interactive de Saint-Quentin dans votre 
+   navigateur pour une analyse visuelle complète.
 
 ------------------------------------------------------------------------
 4. EXEMPLE D'UTILISATION
 ------------------------------------------------------------------------
-- Choix catégories : 3
-- Hauteur : 18
-- Diamètre : 45
-> Résultat : L'IA classe cet arbre en catégorie : MOYEN
+Saisie : 
+   - Catégories : 3
+   - Hauteur : 15
+   - Diamètre : 40
+Résultat : 
+   - >>> RÉSULTAT : Catégorie **Moyen**
+   - [Ouverture de la carte interactive...]
 
 ========================================================================
-Projet IA 2026 - Besoin 1
+Réalisé dans le cadre du Projet IA - FISA 4 - ISEN
+========================================================================
