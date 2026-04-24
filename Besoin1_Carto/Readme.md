@@ -1,7 +1,7 @@
-========================================================================
+
        OUTIL D'AIDE À LA DÉCISION : GESTION DES ARBRES (IA)
                       VILLE DE SAINT-QUENTIN
-========================================================================
+
 
 Cet outil professionnel permet de classer instantanément un arbre dans 
 une catégorie de taille et de visualiser les résultats sur une interface 
@@ -54,6 +54,6 @@ Le serveur inclus est configuré en mode "Quiet" (silencieux) : il ne
 génère aucun log technique inutile, garantissant une lecture claire de 
 vos résultats de prédiction dans le terminal.
 
-========================================================================
+
 Réalisé dans le cadre du Projet IA - FISA 4 - ISEN
-========================================================================
+
