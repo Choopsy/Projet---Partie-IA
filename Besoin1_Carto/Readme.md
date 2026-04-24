@@ -54,5 +54,5 @@ génère aucun log technique inutile, garantissant une lecture claire de
 vos résultats de prédiction dans le terminal.
 
 
--# Réalisé dans le cadre du Projet IA - FISA 4 - ISEN
+Réalisé dans le cadre du Projet IA - FISA 4 - ISEN
 
