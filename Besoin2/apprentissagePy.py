@@ -35,7 +35,7 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 data = pd.read_csv(
-    os.path.join(BASE_DIR, "../DataForIA.csv"),
+    os.path.join(BASE_DIR, "DataForIA.csv"),
     sep=";"
 )
 
