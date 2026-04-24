@@ -1,6 +1,7 @@
 import pickle
 import numpy as np
-import sys
+import os
+import webbrowser  # Pour ouvrir la carte automatiquement
 
 def main():
     print("====================================================")
@@ -24,6 +25,13 @@ def main():
         cluster_id = model.predict(data_scaled)[0]
         
         print(f"\n>>> RÉSULTAT : Catégorie **{mapping[cluster_id]}**")
+        
+        
+        # --- AJOUT : LANCEMENT DE LA CARTE ---
+        print("\nOuverture de la carte interactive dans votre navigateur...")
+        # On définit le chemin de la carte générée lors de l'entraînement
+        path = os.path.abspath("carte_interactive_besoin1.html")
+        webbrowser.open(f"file://{path}")
 
     except FileNotFoundError:
         print(f"Erreur : Le modèle pour {k_choice} clusters n'existe pas.")
